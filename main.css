@@ -1,0 +1,338 @@
+:root {
+    --black:            rgb(0, 0, 0);
+    --darker-blue:      rgb(5, 5, 29);
+    --dark-blue:        rgba(4, 56, 115, 1);
+    --light-blue:       rgb(13, 100, 176);
+    --lighter-blue:     rgb(180, 220, 255);
+    --lighter-yellow:   rgba(255, 228, 146, 1);
+    --gray:             rgba(68, 84, 111, 1);
+    --light-gray:       rgb(210, 210, 210);
+    --lighter-gray:     rgb(243, 243, 243);
+    --off-white:        rgb(252, 252, 252);
+    --white:            rgb(255, 255, 255);
+  
+    --white-a90:        rgba(255, 255, 255, 0.9);
+  }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header */
+.headerContainer {
+ 	display: flex;
+	width: 100%;
+	height: 56px;
+	padding: 0px 12px;
+	justify-content: space-between;
+	align-items: center;
+    background-color: white;
+	
+ }
+ 
+ .headerContainer .leftPanel {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	align-self: stretch;
+}
+.headerContainer .left_panel .logo {
+	display: flex;
+	height: 32px;
+	padding-right: 4px;
+	align-items: center;
+	gap: 12px;
+}
+.headerContainer .left_panel .navigation {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	align-self: stretch;
+}
+
+.headerContainer .left_panel .navigation .primaryItems {
+	display: flex;
+	padding: 0px 4px;
+	align-items: center;
+	gap: 20px;
+	align-self: stretch;
+}
+
+.headerContainer .left_panel .navigation .primaryItems .item {
+	display: flex;
+	padding: 12px 0px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.headerContainer .left_panel .navigation .primaryItems .item .button{
+	display: flex;
+	padding: 0px 6px;
+	align-items: center;
+	gap: 4px;
+	border-radius: 3px;
+}
+.headerContainer .left_panel .navigation .primaryItems .item .button a{
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--black);
+}
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	background-color: var(--lighter-gray);
+}
+
+.center {
+ 	text-align: center;
+ 	width: 100%;
+ 	background-color: #F9F9F9;
+ }
+
+
+ /* Body */
+
+ .hero {
+    display: flex;
+    padding: 140px 260px;
+    align-items: center;
+    background-color: #000000cc;
+}
+
+
+.hero .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    flex: 1 0 0;
+}
+
+.hero .heading .textBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.hero .heading .textBlock h3 {
+    color: #FFF;
+
+    /* Header/H2 */
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.28px;
+    margin: 0;
+}
+.hero .heading .textBlock p {
+    color: #FFF;
+    align-self: stretch;
+    width: 100%;
+
+    /* Paragraph/P2/Regular */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    letter-spacing: -0.36px;
+}
+
+.hero .heading .imageContainer {
+    display: flex;
+    width:540px;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    background: var(--Primary-100, #C4DEFD);
+    z-index: 1;
+}
+
+.heroButton {
+    --color: var(--light-blue);
+    font-family: inherit;
+    display: inline-block;
+    width: 10em;
+    height: 3em;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--white);
+    transition: color .5s;
+    transition: border .5s;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+   
+button:before {
+content: "";
+position: absolute;
+z-index: -1;
+background: var(--color);
+height: 100px;
+width: 255px;
+border-radius: 50%;
+}
+
+button:hover {
+color: #fff;
+border: var(--color);
+}
+
+button:before {
+top: 100%;
+left: 100%;
+transition: all .7s;
+}
+
+button:hover:before {
+top: -30px;
+left: -30px;
+}
+
+button:active:before {
+background: #3a0ca3;
+transition:  0s;
+}
+
+.featuredBooks {
+    display: grid;
+    place-items: center;
+    height: 65svh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.795), rgba(0, 0, 0, 0.774)), url("870886.jpg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+
+.featuredBooks .titleFeaturedBooks {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.28px;
+    margin: 0;
+}
+.card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.card {
+    width: 256px;
+    place-items: center;
+    z-index: 2;
+    aspect-ratio: 50/75;
+    isolation: isolate;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    &:hover {
+        & > .card-front {
+            transform: rotateY(180deg);
+        }
+
+        & > .card-back {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+    }
+}
+
+.card-front,
+.card-back {
+    aspect-ratio: inherit;
+    transition: inherit;
+    width: 100%;
+    border-radius: 0.75rem;
+    inset: 0;
+    position: absolute;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.card-front {
+    z-index: 2;
+
+    & > img {
+        max-width: 100%;
+    }
+}
+
+.card-back {
+    background-color: #000000cc;
+    backface-visibility: hidden;
+    padding: 1.5rem;
+    z-index: 2;
+    transform: rotateY(-180deg);
+    backdrop-filter: blur(4px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cardButton {
+    justify-content: flex-end;
+    --color: var(--light-blue);
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.5em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--white);
+    transition: color .5s;
+    transition: border .5s;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #000000cc;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 30px;
+    gap: 120px;
+}
+.footer li {
+    width: auto;
+    color: #F9F9F9;
+    font-weight: 400;
+}
